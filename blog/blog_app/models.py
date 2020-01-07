@@ -17,4 +17,5 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-
+#  for update use:  python manage.py makemigrations blog_app
+# second command:  python manage.py migrate blog_app
