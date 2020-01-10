@@ -1,9 +1,20 @@
+from .models import Post
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
+from django.views import generic
 from django.shortcuts import render, get_object_or_404
 
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+"""
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
+
+class PostDetail(generic.DetailView):
+    model = Post
+    template_name = 'post_detail.html'
+"""
