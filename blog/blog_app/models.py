@@ -22,6 +22,11 @@ class Post(models.Model):
 # second command:  python manage.py migrate blog_app
 
 
+class Language(models.Model):
+    name = models.CharFireld(max_length=50)
+    paradigm = models.CharField(max_length=50)
+
+
 """
 STATUS = (
     (0,"Draft"),
