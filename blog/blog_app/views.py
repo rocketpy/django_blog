@@ -8,9 +8,16 @@ from .model import Language
 from .serializers import LanguageSerializer
 
 
+class LanguageView(viewsets.ModelViewSet):
+    queryset = Language.objects.all()
+    serializer_class = LanguageSerializer
+
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+
 
 """
 class PostList(generic.ListView):
