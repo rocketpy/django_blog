@@ -48,3 +48,10 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 """
+"""
+class NewMember(models.Model):
+    first_name= models.CharField(max_length=200)
+    last_name= models.CharField(max_length=200)
+    email=models.EmailField(max_length=200)
+    website= models.URLField(max_length=250)
+"""
