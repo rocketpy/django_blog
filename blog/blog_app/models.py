@@ -55,3 +55,13 @@ class NewMember(models.Model):
     email=models.EmailField(max_length=200)
     website= models.URLField(max_length=250)
 """
+
+"""
+# importing the model 
+# from geeks app 
+from geeks.models import GeeksModel 
+  
+# creating a instance of NEwModel 
+geek_object = NewModel.objects.create(geeks_field ="https://www.geeks.org / charfield-django-models/") 
+geek_object.save() 
+"""
